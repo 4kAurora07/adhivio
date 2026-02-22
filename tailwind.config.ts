@@ -47,6 +47,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "priority-low": "hsl(var(--priority-low))",
+        "priority-medium": "hsl(var(--priority-medium))",
+        "priority-high": "hsl(var(--priority-high))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
