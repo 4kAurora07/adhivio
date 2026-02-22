@@ -112,6 +112,7 @@ const Index = () => {
           editingReminder={editingReminder}
           defaultSound={settings.defaultSound}
           volume={settings.volume}
+          existingReminders={[...activeReminders, ...completedReminders]}
         />
       )}
 
