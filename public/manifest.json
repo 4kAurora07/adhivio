@@ -1,6 +1,6 @@
 {
-  "name": "Adhirem",
-  "short_name": "Adhirem",
+  "name": "Adhivio",
+  "short_name": "Adhivio",
   "description": "Never miss a reminder — a reliable PWA reminder app",
   "start_url": "/",
   "display": "standalone",

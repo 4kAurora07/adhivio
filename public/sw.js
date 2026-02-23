@@ -1,4 +1,4 @@
-const CACHE_NAME = 'adhirem-v1';
+const CACHE_NAME = 'adhivio-v1';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
