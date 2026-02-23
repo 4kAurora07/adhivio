@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Check, Clock, Trash2, MoreHorizontal } from 'lucide-react';
+import { Check, Clock, Trash2, MoreHorizontal, Pencil } from 'lucide-react';
 import { Reminder } from '@/types/reminder';
 import { Button } from '@/components/ui/button';
 import {
@@ -135,8 +135,16 @@ export function ReminderCard({
                 <DropdownMenuItem onClick={() => onComplete(reminder.id)}>
                   <Check className="w-4 h-4 mr-2" /> Mark complete
                 </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => onEdit(reminder)}>
+                  <Pencil className="w-4 h-4 mr-2" /> Edit
+                </DropdownMenuItem>
                 <DropdownMenuSeparator />
               </>
+            )}
+            {reminder.completed && (
+              <DropdownMenuItem onClick={() => onEdit(reminder)}>
+                <Pencil className="w-4 h-4 mr-2" /> Edit
+              </DropdownMenuItem>
             )}
             <DropdownMenuItem onClick={() => onDelete(reminder.id)} className="text-destructive focus:text-destructive">
               <Trash2 className="w-4 h-4 mr-2" /> Delete
