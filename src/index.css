@@ -6,90 +6,102 @@
 
 @layer base {
   :root {
+    /* Base Layout */
     --background: 210 40% 98%;
-    --foreground: 222 84% 5%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 84% 5%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 84% 5%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 217 84% 53%;
+    /* 🔵 PRIMARY = Blue (#3B82F6) */
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    /* 💚 SECONDARY = Green (#10B981) */
+    --secondary: 158 64% 52%;
+    --secondary-foreground: 0 0% 100%;
 
+    /* Muted & Surface */
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 142 71% 45%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent (lighter blue for subtle highlights) */
+    --accent: 217 91% 95%;
+    --accent-foreground: 217 91% 40%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 217 84% 53%;
 
-    --radius: 0.75rem;
+    /* Focus rings = Blue */
+    --ring: 217 91% 60%;
 
-    --priority-low: 142 71% 45%;
-    --priority-medium: 38 92% 50%;
-    --priority-high: 0 84% 60%;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
+    /* Priority Colors */
+    --priority-low: 158 64% 52%;     /* Green */
+    --priority-medium: 38 92% 50%;   /* Yellow */
+    --priority-high: 0 84% 60%;      /* Red */
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
     --sidebar-ring: 217 91% 60%;
   }
 
   .dark {
-    --background: 222 84% 5%;
-    --foreground: 220 14% 96%;
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
 
-    --card: 217 33% 17%;
-    --card-foreground: 220 14% 96%;
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 217 33% 17%;
-    --popover-foreground: 220 14% 96%;
+    --popover: 222 47% 14%;
+    --popover-foreground: 210 40% 98%;
 
+    /* 🔵 Blue Primary */
     --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 220 14% 96%;
+    /* 💚 Green Secondary */
+    --secondary: 158 64% 52%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 142 71% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 220 14% 96%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 25%;
-    --input: 217 33% 25%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+
     --ring: 217 91% 60%;
 
-    --priority-low: 142 71% 45%;
+    --priority-low: 158 64% 52%;
     --priority-medium: 38 92% 50%;
     --priority-high: 0 84% 60%;
 
-    --sidebar-background: 222 84% 5%;
-    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 217 33% 17%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 217 33% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 20%;
     --sidebar-ring: 217 91% 60%;
   }
 }
@@ -109,9 +121,11 @@
   ::-webkit-scrollbar {
     width: 4px;
   }
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
+
   ::-webkit-scrollbar-thumb {
     background: hsl(var(--muted-foreground) / 0.3);
     border-radius: 999px;
@@ -122,6 +136,7 @@
   .app-safe-top {
     padding-top: env(safe-area-inset-top, 0px);
   }
+
   .app-safe-bottom {
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
