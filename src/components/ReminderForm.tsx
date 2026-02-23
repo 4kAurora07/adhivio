@@ -105,6 +105,8 @@ export function ReminderForm({ open, onClose, onSave, editingReminder, defaultSo
     return computedDateTime.getTime() > Date.now();
   }, [computedDateTime]);
 
+  const customSoundMissing = sound === 'custom' && !customSoundData;
+
   const handleDateSelect = useCallback((date: Date | undefined) => {
     if (!date) return;
     setSelectedDate(date);
@@ -389,13 +391,19 @@ export function ReminderForm({ open, onClose, onSave, editingReminder, defaultSo
             </div>
           )}
 
+          {customSoundMissing && (
+            <p className="text-xs text-destructive flex items-center gap-1">
+              ⚠ Please upload a custom sound file before saving.
+            </p>
+          )}
+
           {/* Actions */}
           <div className="flex gap-2 pt-2">
             <Button type="button" variant="outline" className="flex-1 h-11" onClick={onClose}>Cancel</Button>
             <Button
               type="submit"
               className="flex-1 h-11"
-              disabled={!isDateTimeValid || isDuplicate || !title.trim()}
+              disabled={!isDateTimeValid || isDuplicate || !title.trim() || customSoundMissing}
             >
               {editingReminder ? 'Update' : 'Create'}
             </Button>
